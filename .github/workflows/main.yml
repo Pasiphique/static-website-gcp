@@ -4,11 +4,8 @@ on:
     branches:
       - main
 jobs:
-  job_id:
+  deploy:
     runs-on: ubuntu-22.04
-    permissions:
-      contents: 'read'
-      id-token: 'write'
     steps:
     - uses: 'actions/checkout@v4'
     - uses: 'google-github-actions/auth@v2'
