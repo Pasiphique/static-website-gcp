@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-    pull_requests:
     
 permissions:
   contents: read
@@ -13,7 +12,7 @@ jobs:
   deploy:
     runs-on: ubuntu-22.04
     steps:
-
+    - uses: actions/checkout@v4
     # configure gcloud 'setup-gcloud' automatically
     - id: 'auth'
       name: 'Authenticate to Google Cloud'
